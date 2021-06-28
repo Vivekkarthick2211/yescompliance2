@@ -30,7 +30,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/','*']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/','26c178a2f993.ngrok.io','*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'corsheaders.middleware.CorsMiddleware',#cors for 
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -96,7 +97,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'rootvi',
         'HOST': '127.0.0.1',
-       'ALLOWED_HOSTS':['http://127.0.0.1:8000/'],
+       'ALLOWED_HOSTS':['http://127.0.0.1:8000/','26c178a2f993.ngrok.io'],
         'PORT': '3306',
          'DISABLE_SERVER_SIDE_CURSORS': True,
         'OPTIONS': {

@@ -13,7 +13,7 @@ class templates(models.Model):
     registerwages_template=models.FileField(blank=False, null=False)
 #main table     
 class File1(models.Model):
-    clientname=models.CharField(max_length=100)
+    clientname=models.CharField(max_length=150)
     contractorname=models.CharField(max_length=100)
     site_projectname=models.CharField(max_length=100)
     locationofwork=models.CharField(max_length=100)
