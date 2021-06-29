@@ -5,7 +5,7 @@ from .validators import validate_file_extension
 
 #login
 class yes_complaines_login(models.Model):
-    user_name=models.CharField(max_length=50)
+    user_name=models.CharField(max_length=80)
     password=models.CharField(max_length=100)
 #template 
 class templates(models.Model):

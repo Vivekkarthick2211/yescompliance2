@@ -281,3 +281,7 @@ class getNotify(viewsets.ModelViewSet):
     queryset=update.objects.all()
     serializer_class=Fileupdate
         
+def checking():
+    df=pd.read_excel('C:\\Users\\cviac\\Downloads\\MR & WR input file.xlsx')
+    print(df)
+    df=df.columns

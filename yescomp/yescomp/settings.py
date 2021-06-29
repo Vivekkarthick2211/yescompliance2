@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", __file__)
+import django
+django.setup()
 
 from django.db import connection
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,14 +89,14 @@ DEFAULT_PARSER_CLASSES=[
 ]
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+# DJANGO_SETTINGS_MODULE=yescomp.settings
 DATABASES = {
       'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {'charset': 'utf8mb4'},
         'NAME': 'yescompliance',
         'USER': 'root',
-        'PASSWORD': 'rootvi',
+        'PASSWORD': 'rootjee',
         'HOST': '127.0.0.1',
        'ALLOWED_HOSTS':['http://127.0.0.1:8000/'],
         'PORT': '3306',
