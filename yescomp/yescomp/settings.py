@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", __file__)
-import django
-django.setup()
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", __file__)
+# import django
+# django.setup()
 
 from django.db import connection
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,9 +32,9 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/','26c178a2f993.ngrok.io','*']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/']
 # Application definition
-
+# AUTH_USER_MODEL = 'compliance.Admin'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -95,7 +95,7 @@ DATABASES = {
       'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {'charset': 'utf8mb4'},
-        'NAME': 'yescompliance',
+        'NAME': 'yes_db',
         'USER': 'root',
         'PASSWORD': 'rootjee',
         'HOST': '127.0.0.1',
